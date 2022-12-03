@@ -1,0 +1,149 @@
+// Shannon E. Thomas Grid
+// November 2022
+
+body {
+	margin: 0 auto;
+	width: 100%;
+}
+
+// containers that span 100% of the browser width
+.bleed {
+	margin: auto;
+	width: 100%;
+	background-size: 100%;
+	background-size: cover;
+}
+
+.bleed.image {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+// a more complicated container for css-only grids
+.flex.container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	border: 0;
+}
+
+.flex.container.v-center {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	border: 0;
+	align-items: center;
+}
+
+.flex.container.column {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+// a little hack for some breathing room
+.spacer {	
+	height: 40px; 
+}
+
+img {
+	width: 100%;
+}
+
+// for smaller screens
+@media screen and (min-width: 320px) {
+	.flex.container {
+		margin-left: 20px;
+		margin-right: 20px;
+
+		.col-3.gridded { width: 50%; }
+
+		.col-2.nav-grid { width:33%; }
+
+		.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { width: 100%; }
+
+		.left-1, .left-2, .left-3, .left-4, .left-5, .left-6, .left-7, .left-8, .left-9, .left-10, .left-11 { margin-left: 0; }
+
+		.right-1, .right-2, .right-3, .right-4, .right-5, .right-6, .right-7, .right-8, .right-9, .right-10, .right-11 { margin-right: 0; }
+	}
+
+	.padded {
+		padding: 8px;
+	}
+
+	.extra-padded {
+		padding-top: 80px;
+	}
+
+	.flex.container.v-center {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+// for bigger screens
+@media screen and (min-width: 720px) {
+	.flex.container {
+		$width: 90%;
+		$col-width: 8.33%;
+		margin-left: auto;
+		margin-right: auto;
+
+		width: $width;
+		.col-1 { width: $col-width; }
+		.col-2, .col-2.nav-grid { width: $col-width*2; }
+		.col-3, .col-3.gridded { width: $col-width*3; }
+		.col-4 { width: $col-width*4; }
+		.col-5 { width: $col-width*5; }
+		.col-6 { width: $col-width*6; }
+		.col-7 { width: $col-width*7; }
+		.col-8 { width: $col-width*8; }
+		.col-9 { width: $col-width*9; }
+		.col-10 { width: $col-width*10; }
+		.col-11 { width: $col-width*11; }
+		.col-12 { width: $col-width*12; }
+
+		.left-1 { margin-left: $col-width; }
+		.left-2 { margin-left: $col-width*2; }
+		.left-3 { margin-left: $col-width*3; }
+		.left-4 { margin-left: $col-width*4; }
+		.left-5 { margin-left: $col-width*5; }
+		.left-6 { margin-left: $col-width*6; }
+		.left-7 { margin-left: $col-width*7; }
+		.left-8 { margin-left: $col-width*8; }
+		.left-9 { margin-left: $col-width*9; }
+		.left-10 { margin-left: $col-width*10; }
+		.left-11 { margin-left: $col-width*11; }
+
+		.right-1 { margin-right: $col-width; }
+		.right-2 { margin-right: $col-width*2; }
+		.right-3 { margin-right: $col-width*3; }
+		.right-4 { margin-right: $col-width*4; }
+		.right-5 { margin-right: $col-width*5; }
+		.right-6 { margin-right: $col-width*6; }
+		.right-7 { margin-right: $col-width*7; }
+		.right-8 { margin-right: $col-width*8; }
+		.right-9 { margin-right: $col-width*9; }
+		.right-10 { margin-right: $col-width*10; }
+		.right-11 { margin-right: $col-width*11; }
+	}
+
+	.flex.container.v-center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

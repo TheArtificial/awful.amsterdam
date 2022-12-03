@@ -1,0 +1,15 @@
+// Shannon E. Thomas
+// November 2022
+
+html, body {
+	height: 100%;
+}
+
+
+// footer
+#footer {
+	padding: 64px 0;
+	background-color: $black;
+
+	p, a { color: $white; }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "awful.amsterdam",
+  "version": "0.1.0",
+  "description": "Atelier Awful website",
+  "author": "Shannon E Thomas",
+  "license": "CC-BY",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheArtificial/awful.amsterdam"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "concurrent-transform": "^1.0.0",
+    "npm": "^6.13.1",
+    "pump": "^3.0.0",
+    "require-dir": "^1.0.0",
+    "eleventy-plugin-metagen": "^1.7.11"
+  },
+  "devDependencies": {
+    "markdown-it-footnote": "^3.0.2",
+    "moment": "^2.24.0",
+    "sass": "^1.25.0"
+  }
+}

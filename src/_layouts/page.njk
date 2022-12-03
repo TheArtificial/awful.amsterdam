@@ -1,0 +1,12 @@
+---
+layout: base
+bodyClass: page
+permalink: "{{ page.inputPath | replace('src/', '', 1) | replace(r/\\.\\w+$/, '') }}.html"
+---
+
+<!-- page content -->
+<div id="content">
+
+  {{ content | safe }}
+
+</div>
