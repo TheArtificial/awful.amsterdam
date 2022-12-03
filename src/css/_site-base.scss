@@ -1,19 +1,25 @@
 // Shannon E. Thomas
 // November 2022
 
-a { color: $black; }
-
-#site-nav {
+body {
 	background-color: $white;
-	color: $black
+	color: $delft;
 }
 
-.art #site-nav, .design #site-nav, .blog #site-nav, .resume #site-nav, .case #site-nav {
-	background-color: $apricot-pale;
+#site-nav {
+	background-color: $delft;
+	color: $white;
+	a {
+		color: $white;
+	}
 }
 
 .padded.nav {
-	padding-top: 12px;
+	padding-top: 22px;
+}
+
+a { 
+	color: $delft; 
 }
 
 figure {
@@ -31,7 +37,16 @@ figcaption {
 }
 
 .svg-white { fill: $white; }
-.svg-black { fill: $black; }
+.svg-delft { fill: $delft; }
+
+.tight {
+	margin-bottom: 0;
+}
+
+.bleed.delft {
+	background-color: $delft;
+	color: $white;
+}
 
 @media screen and (min-width: 320px) {
 	#site-nav {
@@ -39,10 +54,10 @@ figcaption {
 		z-index: 500;
 		top: 0;
 		width: 100%;
-		height: 64px;
+		height: 84px;
 		padding-top: 16px;
 		padding-bottom: 16px;
-		text-align: left;
+		text-align: center;
 	}
 
 	#blogpost {
@@ -63,9 +78,6 @@ figcaption {
 
 
 @media only screen and (min-device-width: 320px) {
-	#sub-nav { 
-		display: none; 
-	}	
 	
 	#content {
 		position: relative;
@@ -75,7 +87,8 @@ figcaption {
 
 @media screen and (min-width: 720px) {
 	#site-nav {
-		height: 32px;
+		height: 48px;
+		text-align: left;
 	}
 
 	#content {
@@ -93,127 +106,3 @@ figcaption {
 	#sub-nav { display: block; }
 	
 }
-
-
-#sub-nav {
-	padding-bottom: 40px;
-}
-
-.sub-nav-link {
-	display: block;
-	line-height: 24px;
-	color: $black;
-}
-
-.center {
-	text-align: center;
-}
-
-ul.top-links li {	display: inline; }
-
-.subtle-link {
-	text-decoration: none;
-}
-
-.tight {
-	margin-bottom: 0;
-}
-
-ul.bottom-links li {
-	padding-bottom: 10px;
-}
-
-ol.h-feed, ol.thoughts-list {
-	padding: 0;
-}
-
-ol.thoughts-list {
-	li {
-		margin-bottom: 40px;
-	}
-}
-
-.date {
-	margin-top: 8px;
-	margin-bottom: 4px;
-}
-
-.posts {
-	margin-bottom: 32px;
-}
-
-.post-title {
- padding-top: 0;
- padding-bottom: 0;
-}
-
-.h-entry {
-	margin-top: 60px;
-	margin-bottom: 60px;
-
-	.meta { color: $grey; }
-	.meta a { color: $white; }
-	.content { 
-		margin-top: 20px; 
-	}
-}
-
-.preview {
-	height: 100px;
-	padding-top: 250px;
-}
-
-.post {
-	h2 {
-		padding: 36px 0 12px 0;
-	}
-	#content {
-		hr {
-			margin: 36px 0;
-		}
-		img {
-			width: 100%;
-			margin-top: 24px;
-			margin-bottom: 24px;
-		}
-	}
-	ul {
-		padding-top: 20px;
-		padding-bottom: 20px;
-		li {
-			list-style-type: disc;
-			margin-left: 18px;
-			padding-bottom: 8px;
-		}
-	}
-}
-
-.plus-pattern-white {
-	height: 200px;
-	background-repeat: repeat;
-	background-image: url('/img/bkg_plus_white.gif');
-}
-
-.plus-pattern-apricot {
-	height: 120px;
-	background-repeat: repeat;
-	background-image: url('/img/ptrn_plus_apricot.gif');
-}
-
-.bg-black {
-	background-color: $black;
-	color: $white;
-
-	a.call-to-action {
-		background-color: $white;
-		color: $black;
-	}
-	a.call-to-action:hover {
-		background-color: $apricot;
-		color: $black;
-	}
-}
-
-.bg-apricot-pale { background: $apricot-pale; }
-.bg-gradient-apricot { background: linear-gradient(to top left, $apricot, $apricot-pale); }
-.bg-gradient-grey {	background: linear-gradient(to top left, $grey, $almost-white); }

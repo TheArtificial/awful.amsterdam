@@ -7,14 +7,14 @@ h1, h2, h3, h4, p, ul, li {
 	padding: 0;
 }
 
-.title-1, .title-2, .body-2 {
-	font-family: "IBM Plex Serif", Georgia, Times, serif;
+.big-type, .bigger-type {
+	font-family: Times, Georgia, serif;
 	font-weight: 400;
 } 
 
-.title-3, .title-4, .title-5, .nav-link, .sub-nav-link, .body-1, .call-to-action, .specifications, figcaption, #blogpost h2, .date {
+.nav-link, .section-name {
 	font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 }
 
 p {
@@ -28,14 +28,7 @@ p {
 
 // Navigation
 .nav-link {
-	font-weight: 600;
 	font-size: 1.0em;
-	text-decoration: none;
-}
-
-.sub-nav-link {
-	font-weight: normal;
-	font-size: 0.8em;
 	text-decoration: none;
 }
 
@@ -43,19 +36,13 @@ a.call-to-action {
 	font-size: .875em;
 	font-weight: bold;
 	text-decoration: none;
-	background-color: black;
+	background-color: delft;
 	color: white;
 	padding: 12px 24px 12px 24px;
 	border-radius: 32px;
 	margin-right: 8px;
 }
 
-a.call-to-action:hover {
-
-	background-color: #333333;
-	color: white;
-
-}
 
 a.inline-link {
 	text-decoration: underline;
@@ -77,16 +64,16 @@ blockquote {
 
 // for mobile
 @media screen and (min-width: 320px) {
-	.title-1 {
-		font-size: 1.5em;
+	.bigger-type {
+		font-size: 2.0em;
 		line-height: 1.1875em;
 		margin-bottom: 16px;
 		font-weight: 500;
 	}
 
-	.title-2, .thought-content p {
-		font-size: 1.25em;
-		line-height: 1.3333333em;
+	.big-type {
+		font-size: 1.5em;
+		line-height: 1.1875em;
 		margin-bottom: 8px;
 	}
 
@@ -123,14 +110,14 @@ blockquote {
 
 // for smaller screens
 @media screen and (min-width: 768px) {
-	.title-1 {
-		font-size: 2.0em;
+	.bigger-type {
+		font-size: 3.0em;
 		line-height: 1.25em;
 		margin-bottom: 16px;
 	}
 	
-	.title-2, .thought-content p {
-		font-size: 1.5em;
+	.big-type {
+		font-size: 2.0em;
 		line-height: 1.3333333em;
 		margin-bottom: 8px;
 	}
