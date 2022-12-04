@@ -46,6 +46,7 @@ figcaption {
 .bleed.delft {
 	background-color: $delft;
 	color: $white;
+	a { color: $white; }
 }
 
 @media screen and (min-width: 320px) {
