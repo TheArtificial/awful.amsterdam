@@ -27,6 +27,18 @@ body {
 	font-weight: $light;
 }
 
+.body-medium {
+	@include body-m;
+	font-family: $sans-serif;
+	font-weight: $light;
+}
+
+.body-small {
+	@include body-s;
+	font-family: $serif;
+	font-weight: $normal;
+}
+
 .date {
 	@include body-s;
 	font-family: $sans-serif;
@@ -43,15 +55,9 @@ body {
 	font-weight: $semibold;
 }
 
-.body-medium {
-	@include body-m;
-	font-family: $sans-serif;
-	font-weight: $light;
-}
-
-.body-small {
+.footer {
 	@include body-s;
-	font-family: $serif;
+	font-family: $sans-serif;
 	font-weight: $normal;
 }
 
@@ -96,6 +102,10 @@ figure {
 figcaption {
 	margin-top: 8px;
 	margin-bottom: 32px;
+}
+
+.extra-bottom {
+	padding-bottom: 24px;
 }
 
 .caption {
@@ -160,7 +170,7 @@ figcaption {
 	
 	#content {
 		position: relative;
-		margin-top: 88px;
+		// margin-top: 88px;
 	}
 }
 
@@ -172,7 +182,7 @@ figcaption {
 
 	#content {
 		position: relative;
-		margin-top: 54px;
+		// margin-top: 54px;
 	}
 
 	.module {
