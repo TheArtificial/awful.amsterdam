@@ -1,13 +1,72 @@
-// Shannon E. Thomas
-// November 2022
+// Atelier Awful
+// September 2023
+
+@import '_awficial-typography';
+@import '_awficial-grid';
 
 body {
 	background-color: $white;
-	color: $delft;
+	color: $bluebell-80;
+}
+
+.title-large {
+	@include title-xl;
+	font-family: $serif;
+	font-weight: $normal;
+}
+
+.title-small {
+	@include title-m;
+	font-family: $sans-serif;
+	font-weight: $semibold;
+}
+
+.body-large {
+	@include body-l;
+	font-family: $sans-serif;
+	font-weight: $light;
+}
+
+.body-medium {
+	@include body-m;
+	font-family: $sans-serif;
+	font-weight: $light;
+}
+
+.body-small {
+	@include body-s;
+	font-family: $serif;
+	font-weight: $normal;
+}
+
+.date {
+	@include body-s;
+	font-family: $sans-serif;
+	font-weight: $semibold;
+}
+
+.heavy {
+	font-weight: $semibold;
+}
+
+.links {
+	@include body-m;
+	font-family: $sans-serif;
+	font-weight: $semibold;
+}
+
+.footer {
+	@include body-s;
+	font-family: $sans-serif;
+	font-weight: $normal;
+}
+
+.center {
+	text-align: center;
 }
 
 #site-nav {
-	background-color: $delft;
+	background-color: $bluebell-70;
 	color: $white;
 	a {
 		color: $white;
@@ -16,10 +75,23 @@ body {
 
 .padded.nav {
 	padding-top: 22px;
+	text-align: right;
+}
+
+.logo {
+	height: 36px;
+}
+
+.nav-link {
+	@include body-m;
+	font-family: $sans-serif;
+	font-weight: $light;
+	text-decoration: none;
+	padding-left: 40px;
 }
 
 a { 
-	color: $delft; 
+	color: $bluebell-80; 
 }
 
 figure {
@@ -32,21 +104,46 @@ figcaption {
 	margin-bottom: 32px;
 }
 
+.extra-bottom {
+	padding-bottom: 24px;
+}
+
 .caption {
 	margin-top: 16px;
 }
 
+.callout {
+	padding-top: 24px;
+	padding-bottom: 8px;
+}
+
 .svg-white { fill: $white; }
-.svg-delft { fill: $delft; }
+.svg-delft { fill: $black; }
 
 .tight {
 	margin-bottom: 0;
 }
 
-.bleed.delft {
-	background-color: $delft;
+.bleed.delft { background-color: $bluebell-70; }
+.bleed.delft-dark { background-color: $bluebell-80; }
+
+.bleed.delft, .bleed.delft-dark {
 	color: $white;
 	a { color: $white; }
+}
+
+.homeheader {
+	background-image: url("/img/pattern-homeheader.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.aboutsection {
+	background-image: url("/img/pattern-aboutsection.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 
 @media screen and (min-width: 320px) {
@@ -60,16 +157,7 @@ figcaption {
 		padding-bottom: 16px;
 		text-align: center;
 	}
-
-	#blogpost {
-		position: relative;
-		margin-top: 144px;
-
-		p, li { 
-			line-height: 1.5em;;
-			margin-bottom: 8px;
-		}
-	}
+	
 
 	.module {
 		padding-top: 40px;
@@ -82,7 +170,7 @@ figcaption {
 	
 	#content {
 		position: relative;
-		margin-top: 88px;
+		// margin-top: 88px;
 	}
 }
 
@@ -94,7 +182,7 @@ figcaption {
 
 	#content {
 		position: relative;
-		margin-top: 54px;
+		// margin-top: 54px;
 	}
 
 	.module {

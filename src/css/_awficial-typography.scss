@@ -1,0 +1,138 @@
+// Awful & Artificial Typography
+// July 2023
+
+// Establishing a base
+h1, h2, h3, h4, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+// Style definition
+$sans-serif: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: "Merriweather", Georgia, Times, serif;
+
+$light: 300;
+$normal: 400;
+$semibold: 600;
+$bold: 700;
+
+.sans-serif.heavy { font-weight: $semibold; }
+.serif.heavy { font-weight: $bold; }
+
+
+// Size definition
+// Title sizes
+@mixin title-3xl {
+	@media screen and (min-width: $width-s) {
+		font-size: 48px;
+		line-height: 60px;
+		padding-bottom: 16px;
+	}
+	@media screen and (min-width: $width-l) {	
+		font-size: 72px;
+		line-height: 84px;
+	}
+}
+
+@mixin title-2xl {
+	@media screen and (min-width: $width-s) {
+		font-size: 40px;
+		line-height: 48px;
+		padding-bottom: 16px;
+	}
+	@media screen and (min-width: $width-l) {	
+		font-size: 60px;
+		line-height: 72px;
+	}
+}
+
+@mixin title-xl {
+	@media screen and (min-width: $width-s) {
+		font-size: 36px;
+		line-height: 42px;
+		padding-bottom: 16px;
+	}
+	@media screen and (min-width: $width-l) {	
+		font-size: 48px;
+		line-height: 60px;
+	}
+}
+
+@mixin title-l {
+	@media screen and (min-width: $width-s) {
+		font-size: 28px;
+		line-height: 36px;
+		padding-bottom: 16px;
+	}
+	@media screen and (min-width: $width-l) {	
+		font-size: 36px;
+		line-height: 44px;
+	}
+}
+
+@mixin title-m {
+	@media screen and (min-width: $width-s) {
+		font-size: 24px;
+		line-height: 32px;
+		padding-bottom: 8px;
+	}
+	@media screen and (min-width: $width-l) {	
+		font-size: 28px;
+		line-height: 36px;
+	}
+}
+
+@mixin title-s {
+	@media screen and (min-width: $width-s) {
+		font-size: 20px;
+		line-height: 28px;
+		padding-bottom: 8px;
+	}
+	@media screen and (min-width: $width-l) {	
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+
+@mixin title-xs {
+	@media screen and (min-width: $width-s) {
+		font-size: 18px;
+		line-height: 24px;
+		padding-bottom: 8px;
+	}
+	@media screen and (min-width: $width-l) {	
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+
+// Body sizes
+@mixin body-s {
+	font-size: 14px;
+	line-height: 20px;
+	padding-bottom: 16px;
+}
+
+@mixin body-xl {
+	font-size: 24px;
+	line-height: 32px;
+	padding-bottom: 24px;
+}
+
+@mixin body-l {
+	font-size: 20px;
+	line-height: 28px;
+	padding-bottom: 24px;
+}
+
+@mixin body-m {
+	font-size: 16px;
+	line-height: 24px;
+	padding-bottom: 16px;
+}
+
+@mixin body-xs {
+	font-size: 12px;
+	line-height: 16px;
+	padding-bottom: 8px;
+}
