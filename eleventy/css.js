@@ -8,7 +8,8 @@ module.exports = (eleventyConfig, { inputFile, outputFile }) =>
 {
   let assetPaths = { styles: {} };
 
-  eleventyConfig.addWatchTarget(path.dirname(inputFile));
+  // Eleventy 4 matches watch patterns literally, so include files below the directory.
+  eleventyConfig.addWatchTarget(path.join(path.dirname(inputFile), "**/*"));
   eleventyConfig.on("eleventy.before", async ({ directories }) =>
   {
     const { css } = await sass.compileAsync(inputFile, { style: "compressed" });
