@@ -4,26 +4,23 @@
   "description": "Atelier Awful website",
   "author": "Shannon E Thomas",
   "license": "CC-BY",
+  "engines": {
+    "node": ">=22.15"
+  },
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "test": "node --test test/*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/TheArtificial/awful.amsterdam"
   },
-  "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-upgrade-help": "^2.0.5",
-    "concurrent-transform": "^1.0.0",
-    "eleventy-plugin-metagen": "^1.7.11",
-    "npm": "^6.13.1",
-    "pump": "^3.0.0",
-    "require-dir": "^1.0.0"
-  },
   "devDependencies": {
-    "markdown-it-footnote": "^3.0.2",
-    "moment": "^2.24.0",
-    "sass": "^1.25.0"
+    "@11ty/eleventy": "4.0.0-alpha.10",
+    "markdown-it": "^14.3.2",
+    "markdown-it-footnote": "^3.0.3",
+    "moment": "^2.31.0",
+    "sass": "^1.105.1"
   }
 }

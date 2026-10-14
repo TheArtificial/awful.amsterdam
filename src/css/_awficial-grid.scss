@@ -1,17 +1,14 @@
 // Awful & Artificial Grid
 // July 2023
 
+@forward "awficial-breakpoints";
+@use "awficial-breakpoints" as *;
+
 
 body {
 	margin: 0 auto;
 	width: 100%;
 }
-
-$width-s: 240px;
-$width-m: 768px;
-$width-l: 1024px;
-$width-xl: 1280px; 
-$width-2xl: 1600px;
 
 
 // By default, images will resize to fill their containers

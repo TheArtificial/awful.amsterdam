@@ -1,0 +1,31 @@
+# Git metadata and editor files are not build inputs.
+**/.git
+**/.github
+**/.gitignore
+**/.gitattributes
+**/.gitmodules
+**/.vscode
+**/.idea
+**/.DS_Store
+**/*.swp
+**/*.swo
+**/*~
+
+# Dependencies and output are generated inside the build stage.
+**/node_modules
+**/_site
+
+# Keep local secrets, npm logs, caches, and temporary files out of the image.
+**/.env
+**/.env.*
+**/npm-debug.log*
+**/npm-*.log
+**/.npm
+**/.cache
+**/.sass-cache
+**/.eleventy-cache
+**/tmp
+**/temp
+**/*.tmp
+
+# Package locks, source, Eleventy helpers, and tests remain in the context.

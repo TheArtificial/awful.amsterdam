@@ -1,6 +1,7 @@
-const pluginMetagen = require('eleventy-plugin-metagen');
+const cssPlugin = require('./eleventy/css.js');
 
-module.exports = function(eleventyConfig) {
+module.exports = (eleventyConfig) =>
+{
   eleventyConfig.setQuietMode(true);
 
   eleventyConfig.addWatchTarget("./src/css/");
@@ -8,7 +9,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // plugins
-  eleventyConfig.addPlugin(pluginMetagen);
+  eleventyConfig.addPlugin(cssPlugin, {
+    inputFile: 'src/css/site.scss',
+    outputFile: 'css/site.css'
+  });
 
   // template filters
   eleventyConfig.addFilter("date", require("./filters/date.js") );

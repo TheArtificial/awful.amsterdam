@@ -11,6 +11,9 @@
  *= require_self
  */
 
-@import "framework";
-@import "_awficial-typography";
-@import "_site-base";
+@use "sass:meta";
+@use "framework";
+
+// Preserve the repeated typography and grid CSS at their original cascade positions.
+@include meta.load-css("awficial-typography");
+@include meta.load-css("site-base");

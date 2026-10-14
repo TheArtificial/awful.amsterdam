@@ -11,7 +11,7 @@
  *= require_self
  */
 
-@import "_awficial-colors";
-@import "_awficial-grid";
-@import "_awficial-typography";
-@import "_awful-base";
+@forward "awficial-colors";
+@forward "awficial-grid";
+@forward "awficial-typography";
+@use "awful-base";

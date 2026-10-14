@@ -1,8 +1,9 @@
 // Atelier Awful
 // September 2023
 
-@import '_awficial-typography';
-@import '_awficial-grid';
+@use "awficial-colors" as *;
+@use "awficial-typography" as *;
+@use "awficial-grid" as *;
 
 body {
 	background-color: $white;

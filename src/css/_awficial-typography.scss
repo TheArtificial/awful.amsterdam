@@ -1,6 +1,8 @@
 // Awful & Artificial Typography
 // July 2023
 
+@use "awficial-breakpoints" as *;
+
 // Establishing a base
 h1, h2, h3, h4, p, ul, li {
 	margin: 0;

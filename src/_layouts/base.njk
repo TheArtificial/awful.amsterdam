@@ -1,21 +1,33 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {% metagen
-      title=title or (date + ' awful.amsterdam'),
-      name="Atelier Awful",
-      description="An awe-inspiring place.",
-      img="/favicon.png",
-      url=page.url,
-      locale='en_NL',
-      generator=eleventy.generator
-    %}
+    {% set metadataTitle = title or (date + ' awful.amsterdam') -%}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ metadataTitle | escape }}</title>
+    <meta name="title" content="{{ metadataTitle | escape }}">
+    <meta name="author" content="Atelier Awful">
+    <meta name="description" content="An awe-inspiring place.">
+    <meta name="generator" content="{{ eleventy.generator | escape }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | escape }}">
+    <meta property="og:locale" content="en_NL">
+    <meta property="og:title" content="{{ metadataTitle | escape }}">
+    <meta property="og:description" content="An awe-inspiring place.">
+    <meta property="og:image" content="/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="{{ page.url | escape }}">
+    <meta name="twitter:title" content="{{ metadataTitle | escape }}">
+    <meta name="twitter:description" content="An awe-inspiring place.">
+    <meta name="twitter:image" content="/favicon.png">
+    <link rel="canonical" href="{{ page.url | escape }}">
 
     <!-- favicon, etc. -->
     <meta name="msapplication-TileColor" content="#12265C">
     <meta name="theme-color" content="#12265C">
 
-    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="{{ assetPaths.styles['/css/site.css'] }}" />
 
 		{{ headtags | safe }}
   </head>
